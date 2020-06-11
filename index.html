@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta name="viewport"　
+content="width=device-width, initial-scale=1.0 ">
+
+    
+
+
+    
+<!--css呼び出し、fontawwesome、アイコン呼び出し、Bootstrap、jq-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+
+
+    <!--css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    
+    
+
+    
+    <!--js-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+    
+    
+    <script src="js/jquery.fadethis.min.js"></script>
+    
+
+
+	
+    <script type="text/javascript">
+        
+        $(function slide() {
+  var speed = 3000;
+  var interval = 5000; 
+  var slide = $('.slider .slide');
+  var count = 0;
+  var length = slide.length-1;
+  setInterval(function(){
+    $(slide[count]).fadeOut(speed);
+    if ( count >= length ) {
+      count = 0;
+    } else {
+      count++;
+    }
+    $(slide[count]).fadeIn(speed);
+  }, interval);
+});
+
+
+</script>
+    
+
+    <!--要素フェードイン-->
+    <script type="text/javascript">
+	$(function(){
+  $(window).fadeThis();
+});
+</script>
+    
+    
+    <!--メニュー-->
+    <script type="text/javascript">
+$(function(){
+    $('header .menu-list .menu a').each(function(){
+        var $href = $(this).attr('href');
+        if(location.href.match($href)) {
+        $(this).addClass('active');
+        } else {
+        $(this).removeClass('active');
+        }
+    });
+});
+</script>
+    
+    
+    <!--ホバーエフェクト-->
+    <script type="text/javascript">
+    $(function(){
+    $('.fig:after')
+        .css( {backgroundPosition: "100px center"} )
+        .mouseover(function(){
+            $(this).stop(true, true).animate({backgroundPosition: "310px" }, {duration:500})
+        })
+        .mouseout(function(){
+            $(this).stop(true, true).animate({backgroundPosition: "500px"}, {duration:200, complete:function(){
+                $(this).css({backgroundPosition: "100px center"})
+            }})
+        })
+});
+    </script>
+    
+    
+<!--css呼び出し、fontawwesome、アイコン呼び出し、Bootstrap、jq-->
+    
+    
+
+</head>
+    
+    
+    
+<body>
+    <header>
+        
+     <div class="menu-list" id="nav-drawer">
+            
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            
+            <div id="nav-content">
+            <div class="menu"><a href="index.html">トップ</a></div>
+        <div class="menu"><a href="news.html">お知らせ</a></div>
+        <div class="menu"><a href="food.html">お食事</a></div>
+        <div class="menu"><a href="drink.html">お飲物</a></div>
+        <div class="menu"><a href="company.html">店舗案内</a></div>
+            </div>
+            
+        </div>
+    </header>
+    
+  <div class="contents">
+      
+      <div class="sec01" id="top">
+<div class="slider">
+    <div class="logo"><img src="images/logo2.png"></div>
+    <div class="toplogotitle"><img src="images/moji4.png"></div>
+　 　<div class="slide" style="background-image: url(images/mv-01.png);"></div>
+　 　<div class="slide" style="background-image: url(images/mv-02.png);"></div>
+　 　<div class="slide" style="background-image: url(images/mv-03.png);"></div>
+</div>
+     </div>
+      
+      <div class="sec02">
+          <div class="left slide-right" data-plugin-options='{"reverse": false}'>
+          <h3 class="min-title"></h3>
+              <a href=""><div class="button"></div></a>
+          </div>
+          <div class="news slide-left" data-plugin-options='{"reverse": false}'>
+              <a href=""><div class="fig"></div></a>
+              <div class="text">
+                  <span class="cat">お知らせ</span>
+                  <div class="date">2019.08.01</div>
+                  <div class="memo">すし御膳竜泉-TENです。</div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="sec03">
+          <div class="fig slide-right" data-plugin-options='{"reverse": false}'></div>
+          <div class="text slide-left" data-plugin-options='{"reverse": false}'>
+              <div class="letter">和の真髄を愉しむ握り寿司、<br>那珂川町産のうなぎや<br>温泉とらふぐのコースもご賞味ください。</div>
+              <div class="left">
+          <h3 class="min-title"></h3>
+              <a href=""><div class="button"></div></a>
+          </div>
+          </div>
+      </div>
+      
+      <div class="sec04">
+          <div class="text slide-right" data-plugin-options='{"reverse": false}'>
+              <div class="letter">お料理にあう栃木県の地酒をご用意しております。</div>
+          <div class="left">
+          <h3 class="min-title"></h3>
+              <a href=""><div class="button"></div></a>
+          </div>
+          </div>
+          <div class="fig slide-left" data-plugin-options='{"reverse": false}'></div>
+      </div>
+      
+      <div class="sec05">
+          <div class="logo"><img src="images/logo2.png"></div>
+          <div class="detail-top">すし御膳 竜泉</div>
+          <p class="detail">住所 : 〒000-0000 山形県那須郡川辺町小川929 </p>
+        <p class="detail">営業時間 : 火〜土 11:30〜14:00 / 17:00〜21:30 (LO 21:00) 日・祝 11:30〜14:00 / 17:00〜21:00 (LO 20:30)</p>
+        <p class="detail">定休日 : 月曜日</p>
+         <div class="fig"><img src="images/toiawase.png"></div>
+      </div>
+      
+      </div>
+      
+      
+    <footer>
+        <p class="copyright">Copyright © SUSHI all rights reserved.</p>
+    </footer>
+      
+     
+
+        
+</body>
+</html>
